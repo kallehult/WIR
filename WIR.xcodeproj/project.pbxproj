@@ -13,6 +13,9 @@
 		E31BBB5D1B80BC9E00F967DE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E31BBB5C1B80BC9E00F967DE /* Images.xcassets */; };
 		E31BBB601B80BC9E00F967DE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E31BBB5E1B80BC9E00F967DE /* LaunchScreen.xib */; };
 		E31BBB6C1B80BC9E00F967DE /* WIRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31BBB6B1B80BC9E00F967DE /* WIRTests.swift */; };
+		E31BBB761B80BCC600F967DE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E31BBB751B80BCC600F967DE /* MapKit.framework */; };
+		E31BBB781B80BDB900F967DE /* UserSettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31BBB771B80BDB900F967DE /* UserSettingsModel.swift */; };
+		E3493B531B81171B0059E4FF /* WeatherDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3493B521B81171B0059E4FF /* WeatherDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		E31BBB651B80BC9E00F967DE /* WIRTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WIRTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E31BBB6A1B80BC9E00F967DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E31BBB6B1B80BC9E00F967DE /* WIRTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WIRTests.swift; sourceTree = "<group>"; };
+		E31BBB751B80BCC600F967DE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E31BBB771B80BDB900F967DE /* UserSettingsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSettingsModel.swift; path = ../UserSettingsModel.swift; sourceTree = "<group>"; };
+		E3493B521B81171B0059E4FF /* WeatherDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E31BBB761B80BCC600F967DE /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +66,7 @@
 		E31BBB471B80BC9E00F967DE = {
 			isa = PBXGroup;
 			children = (
+				E31BBB751B80BCC600F967DE /* MapKit.framework */,
 				E31BBB521B80BC9E00F967DE /* WIR */,
 				E31BBB681B80BC9E00F967DE /* WIRTests */,
 				E31BBB511B80BC9E00F967DE /* Products */,
@@ -77,8 +85,10 @@
 		E31BBB521B80BC9E00F967DE /* WIR */ = {
 			isa = PBXGroup;
 			children = (
+				E31BBB771B80BDB900F967DE /* UserSettingsModel.swift */,
 				E31BBB551B80BC9E00F967DE /* AppDelegate.swift */,
 				E31BBB571B80BC9E00F967DE /* ViewController.swift */,
+				E3493B521B81171B0059E4FF /* WeatherDataModel.swift */,
 				E31BBB591B80BC9E00F967DE /* Main.storyboard */,
 				E31BBB5C1B80BC9E00F967DE /* Images.xcassets */,
 				E31BBB5E1B80BC9E00F967DE /* LaunchScreen.xib */,
@@ -161,6 +171,11 @@
 				TargetAttributes = {
 					E31BBB4F1B80BC9E00F967DE = {
 						CreatedOnToolsVersion = 6.4;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					E31BBB641B80BC9E00F967DE = {
 						CreatedOnToolsVersion = 6.4;
@@ -212,6 +227,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3493B531B81171B0059E4FF /* WeatherDataModel.swift in Sources */,
+				E31BBB781B80BDB900F967DE /* UserSettingsModel.swift in Sources */,
 				E31BBB581B80BC9E00F967DE /* ViewController.swift in Sources */,
 				E31BBB561B80BC9E00F967DE /* AppDelegate.swift in Sources */,
 			);
@@ -411,6 +428,7 @@
 				E31BBB711B80BC9E00F967DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E31BBB721B80BC9E00F967DE /* Build configuration list for PBXNativeTarget "WIRTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +437,7 @@
 				E31BBB741B80BC9E00F967DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
